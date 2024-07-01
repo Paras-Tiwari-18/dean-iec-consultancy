@@ -1,0 +1,94 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.main-heading {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3em;
+    color: rgb(58, 55, 55);
+    font-weight: bold;
+}
+
+.body-gradient {
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+    overflow-x: hidden;
+  } 
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  } 
+.main-body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+    overflow-x: hidden;
+}
+
+.data-brief {
+    flex: 1 1 45%;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s;
+    border-left-width: 0.7em;
+    border-left-style: solid;
+}
+
+.data-brief:hover {
+    transform: translateY(-5px);
+    border-left-width: 1em;
+}
+
+.data-brief h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.data-brief p {
+    flex-grow: 1;
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.data-brief button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    align-self: flex-end;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.data-brief button:hover {
+    background-color: #26890d;
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 2em;
+    }
+    
+    .data-brief {
+        flex: 1 1 100%;
+    }
+}
